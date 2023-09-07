@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.Feature.Division.DivisionFormView">
+    <VerticalStackLayout Padding="7">
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Entry Text="{Binding Num1}" Margin="0,0,100,0"/>
+            <Entry Text="{Binding Num2}" />
+        </HorizontalStackLayout>
+
+        <Button 
+        Command="{Binding DivisionCommand}"
+        Text="Divide" 
+        />
+    </VerticalStackLayout>
+</ContentView>

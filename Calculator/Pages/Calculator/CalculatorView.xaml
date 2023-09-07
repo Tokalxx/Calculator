@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Calculator.Pages.Calculator.CalculatorView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sub="clr-namespace:Calculator.Feature.Subtraction"
+    xmlns:add="clr-namespace:Calculator.Feature.Addition"
+    xmlns:div="clr-namespace:Calculator.Feature.Division"
+    xmlns:mul="clr-namespace:Calculator.Feature.Multiplication"
+    Title="CalculatorView">
+    <ScrollView>
+        <VerticalStackLayout Padding="25" MaximumWidthRequest="800">
+            <VerticalStackLayout>
+                <Label FontSize="Large" Text="Addition" />
+                <add:AdditionFormView Margin="10" BindingContext="{Binding AdditionFormViewModel}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label FontSize="Large" Text="Subtraction" />
+                <sub:SubtractionFormView Margin="10" BindingContext="{Binding SubtractionFormViewModel}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label FontSize="Large" Text="Division" />
+                <div:DivisionFormView Margin="10" BindingContext="{Binding DivisionFormViewModel}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label FontSize="Large" Text="Multiplication" />
+                <mul:MultiplicationFormView Margin="10" BindingContext="{Binding MultiplicationFormViewModel}" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
